@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>List of Properties</h3>
+    </div>
+    <div class="panel-body">
+      <div *ngFor="let property of properties">
+        <div class="well col-md-6" style="padding:50px;">
+          <div class="col-md-12">
+              <label class="col-md-12">Name: {{ property.sales.office.name }}</label>
+              <label class="col-md-12">Price: {{property.sales.closePrice}}</label>
+              <label class="col-md-12">Address: {{property.address.crossStreet}} ,
+                  {{property.address.state}}, {{property.address.country}} .</label>
+          </div>
+          <img [src]="property.photos[0]" [style.width.px]="imageWidth"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

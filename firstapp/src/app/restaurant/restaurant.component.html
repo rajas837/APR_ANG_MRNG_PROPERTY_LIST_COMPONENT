@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="panel">
+      <div class="panel-heading">
+        <h3>List of Properties</h3>
+      </div>
+      <div class="panel-body">
+        <div *ngFor="let res of restaurantList">
+          <div class="well col-md-6" style="padding:50px;">
+            <div class="col-md-12">
+                <label class="col-md-12">Name: {{ res.name }}</label>
+                <label class="col-md-12">Contact: {{res.contact.phone}}</label>
+                <label class="col-md-12">Address: {{res.location.address}} ,
+                    {{res.location.state}}, {{res.location.country}} .</label>
+            </div>
+            <img [src]="res.backgroundImageURL" [style.width.px]="imageWidth"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
